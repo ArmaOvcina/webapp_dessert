@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Reservation</title>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="booking/css/booking.css">
+<link rel="stylesheet" href="css/stuck.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="js/script.js"></script> 
+<script src="js/superfish.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/tmStickUp.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+    <script src="booking/js/booking.js"></script>
+
+<script>
+ $(document).ready(function(){
+
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});
+
+  }); 
+</script>
+<!--[if lt IE 9]>
+ <div style=' clear: both; text-align:center; position: relative;'>
+   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+   </a>
+</div>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+
+
+<![endif]-->
+</head>
+
+<body>
+<!--==============================
+              header
+=================================-->
+<header>
+<!--==============================
+            Stuck menu
+=================================-->
+  <section id="stuck_container">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+        <h1>
+          <a href="index.html">
+            <img src="images/webapp-storecake/logo-storecake.png" alt="Logo alt">
+          </a>
+        </h1>  
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+               <li><a href="index.html">Početna</a></li>
+               <li><a href="index-1.html">Naša ponuda</a></li>
+               <li class="current"><a href="index-2.html">Rezervacija</a></li>
+               <li><a href="index-4.html">Kontakti</a></li>
+             </ul>
+            </nav>        
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+</header>        
+
+<!--=====================
+          Content
+======================-->
+<section class="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 30, 2014!</div>
+  <div class="container">
+    <div class="row">
+      <div class="grid_8">
+        <h2>Reserve Your Table</h2>
+        <img src="images/Online-reservation-banner.png" alt="" class="img_inner fleft inn__1">
+        <div class="extra_wrapper">
+          <div class="text1 tx__1"><a href="#">ZAKIŽITE ROĐENDAN </a></div>
+          <p>Poštovani roditelji, već na vrijeme registrujte rođendan i tortu za Vaše dijete. Važno nam je da ispunimo Vaša ali i dječija očekivanja. </p>
+          <p>Mi smo mladi poslastičari puni entuzijazma za pravljenje najukusnijih i najljepših torti za djecu u našem gradu. Našoj kreativnosti samo je nebo granica.</p>
+          Naš cilj jeste da ispunimo Vaša cijenjeni gosti očekivanja. Želimo da sretni i zadovoljni sa puno osmjeha, sreće i radosti odlazite svome domu i radost nastavite širiti. 
+        </div>
+        <div class="clear"></div>
+        <h2>Osnovne informacije</h2>
+        <div class="text1 tx__1"><a href="#">Vodić kako izvršiti Online naruđbu.</a></div>
+        <p>Najprije, jako nam je važno da ispravno popunite prazba polja. Nama Vaši odgovori mnogo znače, stoga obratite na e-mial i broj telefona. </p>
+        <p>Odaberite datum kada želite proslavu za Vaše dijete. Ovdje napominjemo da možete naručiti samo tortu bez organiziranja dječijih proslava. Obratite pažnju na broj odraslik i broj djece kako smo mogli imao pravi uvid samoj pripremi torte. </p>
+         <br>
+        <a href="#" class="btn">Više informacija</a>
+      </div>
+      <div class="grid_4">
+        <h2>Vrijeme rezervacije</h2>
+        <div class="form_title color1">
+        Poštovani posjetioće, <br>hvala što ste zainteresovani za naše usluge. Rezervaciju možete napraviti savim danom, stim da 7 dana unaprijed morate rezervirati prostor kako bismo mogli prostor pripremiti Vašim željama, te kako bismo bili sigurno da Vas mjesto čeka u željeno vrijeme. <br>Možete nas pozvati i na sljedeći broj: <br>+0 111 234 5678</div>
+        <form id="bookingForm">
+          <div class="tmInput">
+              <input name="Name" placeHolder="Vaše ime i prezime:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+          </div>
+        <div class="tmInput">
+          <input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+        </div>     
+         <div class="clear f_sep1"></div>
+          <strong class="dt">Dolazak</strong>
+         <label class="tmDatepicker">
+          <input type="text" name="Date"  placeHolder='10/05/2014' data-constraints="@NotEmpty @Required @Date">
+        </label>
+        <div class="clear"></div>
+          <strong class="dt">Odlazak</strong>
+        <label class="tmDatepicker">
+          <input type="text" name="Date"  placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
+        </label>
+        <div class="clear"></div>
+        <div class="fl1 ">
+        <em>Odrasli</em>
+        <select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+            <option>1</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <div class="clear height1"></div>
+       
+        
+        </div>
+        <div class="fl1">
+        <em>Djeca</em>
+        <select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+            <option>0</option>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+        </select>
+        
+        </div>
+        <div class="clear"></div>
+        
+        <div class="tmTextarea">
+            <textarea name="Message" placeHolder="Vaša poruka:" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+        </div>
+        <div class="ta__right">
+        <a href="#" class="btn" data-type="reset">Obrišite</a>
+        <a href="#" class="btn" data-type="submit">Pošaljite</a>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">  
+        <div class="socials">
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+        </div>
+        <div class="copyright"><span class="brand">Studenti treće godine </span> &copy; <span id="copyright-year"></span> | <a href="#">Politika privatnosti</a> <div>Webapp dizajnirali uz pomoć i podršku asistenta na predmetu i stranice <a href="https://www.w3schools.com/" rel="nofollow">W3 SCHOOLS.COM</a></div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</footer> 
+  <script>
+  $(function (){
+        $('#bookingForm').bookingForm({
+            ownerEmail: '#'
+        });
+    })
+    $(function() {
+   $('#bookingForm input, #bookingForm textarea').placeholder();
+  });
+    
+  </script>
+</body>
+</html>
+
